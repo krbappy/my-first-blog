@@ -4,29 +4,20 @@
         <title> Django Blog</title>
     </head>
  <body>
+    
      <header>
          <h1><a href="/">Django blog</a></h1>
      </header>
 
+     {% for post in posts %}
      <article>
-        <time>published: 14.06.2021, 12.10</time>
-        <h2><a href="">my first post</a></h2>
-        <p>this my first blog in django.this a basic blog.not like fancy or something speachal like this ,thats why i am not good effort in this </p>
-    </article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+     </article>
+     {% endfor %}
 
-    <article>
-        <time>published: 14.06.2021, 1.10</time>
-        <h2><a href="">my seccond post</a></h2>
-        <p>12Pro max Pacific Blue
-            Only 2month used
-            Brand new condition
-            Not a single spot
-            USA Version
-            With full box and cash memo
-            Location-Jalil Market,Khulna🙂
-            Contact-01711-972774
-        </p>
-    </article>
+ 
 
 
      
